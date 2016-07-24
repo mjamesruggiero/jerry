@@ -48,22 +48,6 @@ In the REPL, type
 
 Notice again how the browser updates.
 
-### Lighttable
-
-Lighttable provides a tighter integration for live coding with an inline
-browser-tab. Rather than evaluating cljs on the command line with the Figwheel
-REPL, you can evaluate code and preview pages inside Lighttable.
-
-Steps: After running `(run)`, open a browser tab in Lighttable. Open a cljs file
-from within a project, go to the end of an s-expression and hit Cmd-ENT.
-Lighttable will ask you which client to connect. Click 'Connect a client' and
-select 'Browser'. Browse to [http://localhost:3449](http://localhost:3449)
-
-View LT's console to see a Chrome js console.
-
-Hereafter, you can save a file and see changes or evaluate cljs code (without
-saving a file).
-
 ### Emacs/CIDER
 
 CIDER is able to start both a Clojure and a ClojureScript REPL simultaneously,
@@ -134,7 +118,7 @@ Now your app is running at
 [http://localhost:5000](http://localhost:5000) in production mode.
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 Michael Ruggiero
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
@@ -142,3 +126,9 @@ your option) any later version.
 ## Chestnut
 
 Created with [Chestnut](http://plexus.github.io/chestnut/) 0.14.0 (66af6f40).
+
+## Named after
+
+[Jerry Gergich](https://en.wikipedia.org/wiki/Jerry_Gergich), of course.
+
+<img src="resources/docs/jerry.gif" alt="Jerry"/>
