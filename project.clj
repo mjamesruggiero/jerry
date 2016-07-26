@@ -1,6 +1,6 @@
 (defproject jerry "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Toy calculator in React"
+  :url "http://mjamesruggiero.com"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
@@ -12,7 +12,9 @@
                  [bk/ring-gzip "0.1.1"]
                  [ring.middleware.logger "0.5.0"]
                  [compojure "1.5.0"]
-                 [environ "1.0.3"]]
+                 [environ "1.0.3"]
+                 [cljsjs/react "15.1.0-0"]
+                 [cljsjs/react-dom "15.1.0-0"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]
             [lein-environ "1.0.3"]]
@@ -71,7 +73,7 @@
   ;; not be picked up, instead configure figwheel here on the top level.
 
   :figwheel {;; :http-server-root "public"       ;; serve static assets from resources/public/
-             ;; :server-port 3449                ;; default
+             :server-port 3448                ;; default
              ;; :server-ip "127.0.0.1"           ;; default
              :css-dirs ["resources/public/css"]  ;; watch and update CSS
 
