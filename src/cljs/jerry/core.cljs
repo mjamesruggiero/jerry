@@ -15,12 +15,25 @@
 (defn element [type props & children]
   (js/React.createElement type (clj->js props) children))
 
-(def jerry-gif
-  "http://25.media.tumblr.com/1e2b2139f003508783fecb2ee641df47/tumblr_mg8vud1kfY1r0e42eo6_r2_250.gif")
+(defonce app-state (atom {:display 0}))
 
+(defn component [name & {:keys [render]}]
+  (js/React.createClass
+   #js {:displayName name
+        :render (fn []
+                  (this-as t
+                    (render (js->clj (.-props t) :keywordize-keys t))))}))
 
-(def vdom (element "div" {}
-                   (element "p" {} "hello from React")
-                   (element "img" {:src jerry-gif})))
+(def Display
+  (component "Display"
+        :render (fn [props]
+                  (element "div" {:className "display"}
+                             (:value props)))))
 
-(js/ReactDOM.render vdom (js/document.getElementById "app"))
+(defn render [state]
+  (js/ReactDOM.render (element Display {:value (:display state)})
+                      (js/document.getElementById "app")))
+
+(render @app-state)
+(add-watch app-state :redraw (fn [_ _ _ state] (render state)))
+
