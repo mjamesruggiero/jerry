@@ -3,13 +3,13 @@ h1 {
 }
 
 .display {
-    border: "1px solid black";
-    font-family: "Monospace";
-    font-size: "2.5rem";
-    line-height: "3rem";
-    text-align: "right";
-    width: "20rem";
-    height: "3rem";
+    border: 1px solid black;
+    font-family: Monospace;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: right;
+    width: 20rem;
+    height: 3rem;
 }
 
 .history {
